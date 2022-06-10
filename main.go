@@ -14,7 +14,6 @@ func main() {
 	api = "http://ip-api.com/json/"
 
 	var api_fields string
-	//api_fields = "?fields=1017"
 	api_fields = "?fields=1082361"
 
 	if len(os.Args) < 2 {
