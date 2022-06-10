@@ -30,8 +30,6 @@ func main() {
 	var url string
 	url = api + ip + api_fields
 
-	//fmt.Println("\n" + url)
-
 	var http_client = http.Client{Timeout: 10 * time.Second}
 
 	r, err := http_client.Get(url)
@@ -40,7 +38,6 @@ func main() {
 	}
 	defer r.Body.Close()
 	body, err := ioutil.ReadAll(r.Body)
-	//println("\n" + string(body))
 
 	type Response struct {
 		Country    string  `json:"country"`
